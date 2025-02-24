@@ -1,0 +1,482 @@
+-EXERCICIO 1
+
+import java.util.Scanner;
+
+public class IdadeEmDias {
+    public static void main(String[] args) {
+        // Criação de objeto Scanner para leitura de dados
+        Scanner scanner = new Scanner(System.in);
+        
+        // Leitura dos dados de entrada
+        System.out.print("Digite a idade em anos: ");
+        int anos = scanner.nextInt();
+        
+        System.out.print("Digite a idade em meses: ");
+        int meses = scanner.nextInt();
+        
+        System.out.print("Digite a idade em dias: ");
+        int dias = scanner.nextInt();
+        
+        // Calculando a idade total em dias
+        int idadeEmDias = (anos * 365) + (meses * 30) + dias;
+        
+        // Exibindo o resultado
+        System.out.println("A idade total em dias é: " + idadeEmDias + " dias.");
+        
+        // Fechar o scanner
+        scanner.close();
+    }
+}
+
+
+-EXERCICIO 2
+
+import java.util.Scanner;
+
+public class PorcentagemEleitores {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Digite o total de eleitores: ");
+        int TotalEleitores = scanner.nextInt();
+
+        System.out.print("Digite a quantidade de votos em branco ");
+        int VotosBrancos = scanner.nextInt();
+        
+        System.out.print("Digite a quantidade de votos nulos:  ");
+        int VotosNulos = scanner.nextInt();
+        
+        System.out.print("Digite a qunatidade de votos validos:  ");
+        int VotosValidos = scanner.nextInt();
+
+
+        double PorcentagemBrancos = (double) VotosBrancos / TotalEleitores * 100;
+        
+        double PorcentagemNulos = (double) VotosNulos / TotalEleitores * 100;
+        
+        double PorcentagemValidos =  (double) VotosValidos / TotalEleitores * 100;
+        
+        System.out.println("Porcentagem de eleitores que votaram em branco: " + PorcentagemBrancos);
+        
+        System.out.println("Porcentagem de eleitores que votaram em branco: " + PorcentagemNulos);
+
+        System.out.println("Porcentagem de eleitores que votaram em branco: " + PorcentagemValidos);
+        
+
+        scanner.close();
+    }
+}
+
+
+-EXERCICIO 3 
+
+import java.util.Scanner;
+
+public class PorcentagemEleitores {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Qual o salario mensal do funcionario: ");
+        int SalarioFuncionario = scanner.nextInt();
+        
+        System.out.print("Qual a porcentagem de reajuste de salario: ");
+        double SalarioReajuste = scanner.nextInt();
+        
+        double SalarioFinal =  (double) SalarioFuncionario + ((SalarioFuncionario * SalarioReajuste)/100);
+        
+        System.out.println("Porcentagem de eleitores que votaram em branco: " + SalarioFinal);
+        
+
+        scanner.close();
+    }
+}
+
+-EXERCICIO 4
+
+import java.util.Scanner;
+
+public class CustoCarro {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite o custo de fabrica do carro: ");
+        double custoFabrica = scanner.nextDouble();
+
+        double percentualDistribuidor = 28.0 / 100;
+        double percentualImpostos = 45.0 / 100;
+
+        double custoDistribuidor = custoFabrica * percentualDistribuidor;
+        double custoImpostos = custoFabrica * percentualImpostos;
+
+        double custoFinal = custoFabrica + custoDistribuidor + custoImpostos;
+
+        System.out.printf("O custo final ao consumidor e: " + custoFinal);
+
+        scanner.close();
+    }
+}
+
+-EXERCICIO 5
+
+import java.util.Scanner;
+
+public class SalarioVendedor {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite o numero de carros vendidos: ");
+        int carrosVendidos = scanner.nextInt();
+
+        System.out.print("Digite o valor total das vendas: ");
+        double valorTotalVendas = scanner.nextDouble();
+
+        System.out.print("Digite o salario fixo do vendedor: ");
+        double salarioFixo = scanner.nextDouble();
+
+        System.out.print("Digite o valor que o vendedor recebe por carro vendido: ");
+        double comissaoPorCarro = scanner.nextDouble();
+
+        double comissaoTotalCarrosVendidos = carrosVendidos * comissaoPorCarro;
+        double comissaoPorValorDeVendas = valorTotalVendas * 0.05 valor total das vendas
+        double salarioFinal = salarioFixo + comissaoTotalCarrosVendidos + comissaoPorValorDeVendas;
+
+        System.out.printf("O salario final do vendedor e: " + salarioFinal);
+
+        scanner.close();
+    }
+}
+
+-EXERCICIO 6
+
+import java.util.Scanner;
+
+public class FahrenheitParaCelsius {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite a temperatura em Fahrenheit: ");
+        double fahrenheit = scanner.nextDouble();
+
+        double celsius = (fahrenheit - 32) * 5 / 9;
+
+        System.out.printf("A temperatura em Celsius e: " + celsius);
+
+        scanner.close();
+    }
+}
+
+-EXERCICIO 7
+
+import java.util.Scanner;
+
+public class MaiorQueDez {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite um valor: ");
+        int valor = scanner.nextInt();
+
+        if (valor > 10) {
+            System.out.println("O NUMERO E MAIOR QUE 10");
+        } else {
+            System.out.println("O NUMERO NAO E MAIOR QUE 10");
+        }
+
+        scanner.close();
+    }
+}
+
+-EXERCICIO 8
+
+import java.util.Scanner;
+
+public class PositivoOuNegativo {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        // Leitura do valor
+        System.out.print("Digite um valor: ");
+        int valor = scanner.nextInt();
+
+        if (valor >= 0) {
+            System.out.println("O NUMERO E POSITIVO!");
+        } else {
+            System.out.println("O NUMERO E NEGATIVO!");
+        }
+
+        scanner.close();
+    }
+}
+
+-EXERCICIO 9
+
+import java.util.Scanner;
+
+public class CustoMacas {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite o numero de macas compradas: ");
+        int numeroMacas = scanner.nextInt();
+
+        double precoPorMaca;
+
+        if (numeroMacas < 12) {
+            precoPorMaca = 1.30;
+        } else {
+    
+            precoPorMaca = 1.00;
+        }
+
+        double custoTotal = numeroMacas * precoPorMaca;
+
+        System.out.printf("O custo total da compra e:" + custoTotal);
+
+        scanner.close();
+    }
+}
+
+-EXERCICIO 10
+
+import java.util.Scanner;
+
+public class AprovacaoAluno {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite a nota da 1a. avaliacao: ");
+        double nota1 = scanner.nextDouble();
+
+        System.out.print("Digite a nota da 2a. avaliacao: ");
+        double nota2 = scanner.nextDouble();
+
+        double media = (nota1 + nota2) / 2;
+
+        if (media >= 6) {
+            System.out.println("Aluno aprovado!");
+        } else {
+            System.out.println("Aluno reprovado!");
+        }
+
+        System.out.printf("A media do aluno e: " + media);
+
+        scanner.close();
+    }
+}
+
+-EXERCICIO 11
+
+import java.util.Scanner;
+
+public class DireitoVoto {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite o ano atual: ");
+        int anoAtual = scanner.nextInt();
+
+        System.out.print("Digite o ano de nascimento da pessoa: ");
+        int anoNascimento = scanner.nextInt();
+
+        int idade = anoAtual - anoNascimento;
+
+        if (idade >= 16) {
+            System.out.println("Voce pode votar este ano");
+        } else {
+            System.out.println("Voce não pode votar este ano");
+        }
+
+        scanner.close();
+    }
+}
+
+-EXERCICIO 12
+
+import java.util.Scanner;
+
+public class MaiorValor {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite o primeiro valor: ");
+        int valor1 = scanner.nextInt();
+
+        System.out.print("Digite o segundo valor: ");
+        int valor2 = scanner.nextInt();
+
+        if (valor1 > valor2) {
+            System.out.println("O maior valor e: " + valor1);
+        } else {
+            System.out.println("O maior valor e: " + valor2);
+        }
+
+        scanner.close();
+    }
+}
+
+
+-EXERCICIO 13
+
+import java.util.Scanner;
+
+public class OrdemCrescente {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite o primeiro valor: ");
+        int valor1 = scanner.nextInt();
+
+        System.out.print("Digite o segundo valor: ");
+        int valor2 = scanner.nextInt();
+
+        if (valor1 < valor2) {
+            System.out.println("Valores em ordem: " + valor1 + ", " + valor2);
+        } else {
+            System.out.println("Valores em ordem: " + valor2 + ", " + valor1);
+        }
+
+        scanner.close();
+    }
+}
+
+
+
+-EXERCICIO 14
+
+import java.util.Scanner;
+
+public class DuracaoJogoXadrez {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite a hora de início do jogo (em horas inteiras): ");
+        int horaInicio = scanner.nextInt();
+
+        System.out.print("Digite a hora de fim do jogo (em horas inteiras): ");
+        int horaFim = scanner.nextInt();
+
+        int duracao;
+
+        if (horaFim >= horaInicio) {
+            duracao = horaFim - horaInicio;
+        } else {
+            duracao = (24 - horaInicio) + horaFim; 
+        }
+
+        System.out.println("A duração do jogo foi de " + duracao + " horas.");
+
+        scanner.close();
+    }
+}
+
+-EXERCICIO 15
+
+import java.util.Scanner;
+
+public class SalarioFuncionario {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite o numero de horas trabalhadas no mes: ");
+        int horasTrabalhadas = scanner.nextInt();
+
+        System.out.print("Digite o valor do salario por hora: ");
+        double salarioPorHora = scanner.nextDouble();
+
+        int horasNormais = 160; 
+
+        double salarioBase = horasNormais * salarioPorHora; 
+
+        double salarioExtra = 0.0;
+
+        if (horasTrabalhadas > horasNormais) {
+            int horasExtras = horasTrabalhadas - horasNormais;
+            salarioExtra = horasExtras * salarioPorHora * 1.5 ;
+        }
+
+        double salarioTotal = salarioBase + salarioExtra;
+
+        System.out.printf("O salario total do funcionario e: " + salarioTotal);
+
+        scanner.close();
+    }
+}
+
+-EXERCICIO 16
+
+import java.util.Scanner;
+
+public class DespesaTrimestral {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite o gasto de janeiro: R$ ");
+        double gastoJaneiro = scanner.nextDouble();
+
+        System.out.print("Digite o gasto de fevereiro: R$ ");
+        double gastoFevereiro = scanner.nextDouble();
+
+        System.out.print("Digite o gasto de marco: R$ ");
+        double gastoMarço = scanner.nextDouble();
+
+        double despesaTotal = gastoJaneiro + gastoFevereiro + gastoMarço;
+
+        double mediaMensal = despesaTotal / 3;
+
+        System.out.println("Despesa total no trimestre: " + despesaTotal);
+        System.out.printf("Media mensal de gastos: " + mediaMensal);
+
+        scanner.close();
+    }
+}
+
+-EXERCICIO 17
+
+import java.util.Scanner;
+
+public class MediaLP1 {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite a nota da P1: ");
+        double P1 = scanner.nextDouble();
+
+        System.out.print("Digite a nota da E1: ");
+        double E1 = scanner.nextDouble();
+
+        System.out.print("Digite a nota da E2: ");
+        double E2 = scanner.nextDouble();
+
+        System.out.print("Digite a nota do API: ");
+        double API = scanner.nextDouble();
+
+        System.out.print("Digite o valor de X: ");
+        double X = scanner.nextDouble();
+
+        System.out.print("Digite a nota de SUB: ");
+        double SUB = scanner.nextDouble();
+
+        double parte1 = P1 * 0.6 + ((E1 + E2) / 2) * 0.4;
+        double parte2 = Math.max((parte1 - 5.9), 0) / (parte1 - 5.9);
+        double mediaLP1 = (parte1 * 0.5) + (parte2 * (API * 0.5)) + X + (SUB * 0.3);
+
+        System.out.printf("A media final de LP1 e: ", mediaLP1);
+
+        scanner.close();
+    }

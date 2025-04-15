@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetolp3.VacaControle">
+   <children>
+      <Label layoutX="85.0" layoutY="66.0" text="Raca" />
+      <Label layoutX="290.0" layoutY="66.0" text="Cor" />
+      <Label layoutX="507.0" layoutY="66.0" text="Peso" />
+      <TextField fx:id="txtRacaVaca" layoutX="36.0" layoutY="102.0" prefHeight="26.0" prefWidth="122.0" />
+      <TextField fx:id="txtCorVaca" layoutX="239.0" layoutY="102.0" prefHeight="26.0" prefWidth="122.0" />
+      <TextField fx:id="txtPesoVaca" layoutX="458.0" layoutY="102.0" prefHeight="26.0" prefWidth="122.0" />
+      <TextArea fx:id="txtResultado" layoutX="380.0" layoutY="186.0" prefHeight="200.0" prefWidth="200.0" />
+      <Button fx:id="btnMugirVaca" layoutX="85.0" layoutY="217.0" mnemonicParsing="false" onAction="#mugir" prefHeight="26.0" prefWidth="52.0" text="Mugir" />
+      <Button fx:id="txtComerVaca" layoutX="85.0" layoutY="273.0" mnemonicParsing="false" onAction="#comer" text="Comer" />
+      <Button fx:id="btnMenu" layoutX="14.0" layoutY="359.0" mnemonicParsing="false" onAction="#VoltarMenu" prefHeight="26.0" prefWidth="52.0" text="Menu" />
+   </children>
+</AnchorPane>

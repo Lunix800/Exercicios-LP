@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetolp3.LancheControle">
+   <children>
+      <Label layoutX="99.0" layoutY="85.0" text="Nome" />
+      <Label layoutX="292.0" layoutY="85.0" text="Preço" />
+      <Label layoutX="470.0" layoutY="85.0" text="Tamanho" />
+      <TextField fx:id="txtPrecoLanche" layoutX="240.0" layoutY="117.0" prefHeight="26.0" prefWidth="134.0" />
+      <TextField fx:id="txtNomeLanche" layoutX="48.0" layoutY="117.0" prefHeight="26.0" prefWidth="134.0" />
+      <TextField fx:id="txtTamanhoLanche" layoutX="428.0" layoutY="117.0" prefHeight="26.0" prefWidth="134.0" />
+      <Button fx:id="btnProntoLanche" layoutX="90.0" layoutY="256.0" mnemonicParsing="false" onAction="#servir" prefHeight="26.0" prefWidth="66.0" text="Pronto" />
+      <Button fx:id="btnPrecoLanche" layoutX="90.0" layoutY="302.0" mnemonicParsing="false" onAction="#preco" prefHeight="26.0" prefWidth="66.0" text="Preço" />
+      <TextArea fx:id="txtResultado" layoutX="386.0" layoutY="186.0" prefHeight="200.0" prefWidth="200.0" />
+      <Button fx:id="btnMenu" layoutX="15.0" layoutY="359.0" mnemonicParsing="false" onAction="#VoltarMenu" prefHeight="26.0" prefWidth="66.0" text="Menu" />
+   </children>
+</AnchorPane>

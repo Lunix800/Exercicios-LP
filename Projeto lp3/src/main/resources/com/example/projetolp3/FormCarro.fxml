@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetolp3.CarroControle">
+   <children>
+      <Label fx:id="lblMarca" layoutX="113.0" layoutY="72.0" text="Marca" />
+      <Label fx:id="lblModelo" layoutX="279.0" layoutY="72.0" text="Modelo" />
+      <Label fx:id="lblAno" layoutX="461.0" layoutY="72.0" text="Ano" />
+      <TextField fx:id="txtMarca" layoutX="66.0" layoutY="121.0" prefHeight="26.0" prefWidth="126.0" />
+      <TextField fx:id="txtModelo" layoutX="236.0" layoutY="121.0" prefHeight="26.0" prefWidth="126.0" />
+      <TextField fx:id="txtAno" layoutX="408.0" layoutY="121.0" prefHeight="26.0" prefWidth="126.0" />
+      <Button fx:id="btnMarca" layoutX="103.0" layoutY="264.0" mnemonicParsing="false" onAction="#marca" text="Marca" />
+      <Button fx:id="btnAno" layoutX="103.0" layoutY="312.0" mnemonicParsing="false" onAction="#ano" prefHeight="26.0" prefWidth="49.0" text="Ano" />
+      <TextArea fx:id="txtResultado" layoutX="386.0" layoutY="190.0" prefHeight="200.0" prefWidth="200.0" />
+      <Button fx:id="txtMenu" layoutX="14.0" layoutY="360.0" mnemonicParsing="false" onAction="#VoltarMenu" text="Menu" />
+   </children>
+</AnchorPane>

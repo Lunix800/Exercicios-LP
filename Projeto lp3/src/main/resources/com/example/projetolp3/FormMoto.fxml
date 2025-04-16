@@ -4,19 +4,33 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetolp3.MotoControle">
    <children>
-      <Label layoutX="84.0" layoutY="59.0" text="Marca" />
-      <Label layoutX="279.0" layoutY="59.0" text="Modelo" />
-      <Label layoutX="476.0" layoutY="59.0" text="Cilindrada" />
-      <TextField fx:id="txtMarcaMoto" layoutX="37.0" layoutY="100.0" prefHeight="26.0" prefWidth="125.0" />
-      <TextField fx:id="txtModeloMarca" layoutX="237.0" layoutY="100.0" prefHeight="26.0" prefWidth="125.0" />
-      <TextField fx:id="txtCilindradaMoto" layoutX="440.0" layoutY="100.0" prefHeight="26.0" prefWidth="125.0" />
-      <TextArea fx:id="txtResultado" layoutX="386.0" layoutY="186.0" prefHeight="200.0" prefWidth="200.0" />
-      <Button fx:id="btnAcelerarMoto" layoutX="74.0" layoutY="232.0" mnemonicParsing="false" onAction="#acelerar" text="Acelerar" />
-      <Button fx:id="btnFrearMoto" layoutX="74.0" layoutY="280.0" mnemonicParsing="false" onAction="#frear" prefHeight="26.0" prefWidth="59.0" text="Frear" />
+      <Label layoutX="101.0" layoutY="90.0" text="Marca" />
+      <Label layoutX="279.0" layoutY="90.0" text="Modelo" />
+      <Label layoutX="447.0" layoutY="90.0" text="Cilindrada" />
+      <TextField fx:id="txtMarcaMoto" layoutX="53.0" layoutY="117.0" prefHeight="26.0" prefWidth="125.0" promptText="Ex. Honda" />
+      <TextField fx:id="txtModeloMarca" layoutX="237.0" layoutY="117.0" prefHeight="26.0" prefWidth="125.0" promptText="Ex. XRE 160" />
+      <TextField fx:id="txtCilindradaMoto" layoutX="415.0" layoutY="117.0" prefHeight="26.0" prefWidth="125.0" promptText="Ex. 162" />
+      <TextArea fx:id="txtResultado" disable="true" layoutX="52.0" layoutY="228.0" prefHeight="123.0" prefWidth="314.0" />
+      <Button fx:id="btnAcelerarMoto" layoutX="53.0" layoutY="159.0" mnemonicParsing="false" onAction="#acelerar" prefHeight="26.0" prefWidth="314.0" text="Acelerar" />
+      <Button fx:id="btnFrearMoto" layoutX="53.0" layoutY="193.0" mnemonicParsing="false" onAction="#frear" prefHeight="26.0" prefWidth="314.0" text="Frear" />
       <Button fx:id="btnMenu" layoutX="14.0" layoutY="359.0" mnemonicParsing="false" onAction="#VoltarMenu" prefHeight="26.0" prefWidth="59.0" text="Menu" />
+      <ImageView fitHeight="123.0" fitWidth="200.0" layoutX="382.0" layoutY="230.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/images%20(2).jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="251.0" layoutY="14.0" text="Moto">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Label>
+      <Label fx:id="errorLabel" layoutX="85.0" layoutY="363.0" />
    </children>
 </AnchorPane>

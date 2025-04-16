@@ -4,19 +4,33 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetolp3.CachorroControle">
    <children>
       <Label layoutX="97.0" layoutY="80.0" text="Nome" />
       <Label alignment="CENTER" layoutX="287.0" layoutY="82.0" text="Raça" AnchorPane.leftAnchor="287.0" AnchorPane.rightAnchor="288.2" />
       <Label layoutX="477.0" layoutY="82.0" text="Idade" />
-      <TextField id="txtNomeCachorro" fx:id="txtNome" layoutX="38.0" layoutY="110.0" />
-      <TextField id="txtRacaCachorro" fx:id="txtRaca" alignment="CENTER" layoutX="225.0" layoutY="112.0" />
-      <TextField id="txtRacaCachorro" fx:id="txtIdade" layoutX="417.0" layoutY="112.0" />
-      <Button fx:id="btnNomeCachorro" layoutX="89.0" layoutY="235.0" mnemonicParsing="false" onAction="#nome" text="Nome" />
-      <Button fx:id="btnLatirCachorro" layoutX="88.0" layoutY="287.0" mnemonicParsing="false" onAction="#latir" prefHeight="26.0" prefWidth="49.0" text="Latir" />
-      <TextArea fx:id="txtResultado" layoutX="386.0" layoutY="187.0" prefHeight="200.0" prefWidth="200.0" />
+      <TextField id="txtNomeCachorro" fx:id="txtNome" layoutX="38.0" layoutY="110.0" promptText="Ex. José" />
+      <TextField id="txtRacaCachorro" fx:id="txtRaca" layoutX="225.0" layoutY="112.0" promptText="Ex. Schnauzer" />
+      <TextField id="txtRacaCachorro" fx:id="txtIdade" layoutX="417.0" layoutY="112.0" promptText="Ex. 12" />
+      <Button fx:id="btnNomeCachorro" layoutX="38.0" layoutY="153.0" mnemonicParsing="false" onAction="#nome" prefHeight="26.0" prefWidth="338.0" text="Nome" />
+      <Button fx:id="btnLatirCachorro" layoutX="37.0" layoutY="194.0" mnemonicParsing="false" onAction="#latir" prefHeight="26.0" prefWidth="338.0" text="Latir" />
+      <TextArea fx:id="txtResultado" disable="true" editable="false" layoutX="38.0" layoutY="233.0" prefHeight="115.0" prefWidth="338.0" />
       <Button fx:id="btnMenu" layoutX="12.0" layoutY="361.0" mnemonicParsing="false" onAction="#VoltarMenu" text="Menu" />
+      <ImageView fitHeight="115.0" fitWidth="185.0" layoutX="405.0" layoutY="233.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/images.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="219.0" layoutY="14.0" text="Cachorro">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Label>
+      <Label fx:id="errorLabel" layoutX="64.0" layoutY="365.0" />
    </children>
 </AnchorPane>

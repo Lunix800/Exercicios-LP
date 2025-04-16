@@ -1,4 +1,4 @@
-package com.example.projetolp3;
+package com.example.projetolp3.Model;
 
 public class Pato {
     // Atributos
@@ -6,25 +6,20 @@ public class Pato {
     private String cor;
     private double peso;
 
-    // Construtor
     public Pato(String especie, String cor, double peso) {
         this.especie = especie;
         this.cor = cor;
         this.peso = peso;
     }
 
-    // Método para nadar
+    //Metodo nadar
     public String nadar() {
         return("O pato " + cor  + " está nadando");
     }
 
-    // Método para voar
+    //Metodo voar
     public String voar() {
         return("O pato que tem " + peso + "KG está voando");
     }
 
-    // Método para grasnar
-    public void grasnar() {
-        System.out.println("O pato está grasnando...");
-    }
 }

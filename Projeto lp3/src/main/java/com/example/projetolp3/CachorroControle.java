@@ -1,5 +1,6 @@
 package com.example.projetolp3;
 
+import com.example.projetolp3.Model.Cachorro;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -7,6 +8,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -22,6 +24,9 @@ public class CachorroControle {
     private Button btnMenu;
 
     @FXML
+    private Label errorLabel;
+
+    @FXML
     private TextField txtIdade;
 
     @FXML
@@ -35,20 +40,34 @@ public class CachorroControle {
 
     @FXML
     void nome(ActionEvent event) {
-        Cachorro testeCachorro = new Cachorro (txtNome.getText(),
-                                               txtRaca.getText(),
-                                               Integer.valueOf(txtIdade.getText())
-                                              );
-        txtResultado.setText(testeCachorro.nome());
+        try {
+            Cachorro testeCachorro = new Cachorro(
+                    txtNome.getText(),
+                    txtRaca.getText(),
+                    Integer.valueOf(txtIdade.getText())
+            );
+            txtResultado.setText(testeCachorro.nome());
+            errorLabel.setText("");
+        } catch (NumberFormatException e) {
+            errorLabel.setText("Erro: Por favor insira um número inteiro válido para a idade!");
+        }
     }
+
     @FXML
     void latir(ActionEvent event) {
-        Cachorro testeCachorro = new Cachorro (txtNome.getText(),
-                                               txtRaca.getText(),
-                                               Integer.valueOf(txtIdade.getText())
-                                              );
-        txtResultado.setText(testeCachorro.latir());
+        try {
+            Cachorro testeCachorro = new Cachorro(
+                    txtNome.getText(),
+                    txtRaca.getText(),
+                    Integer.valueOf(txtIdade.getText())
+            );
+            txtResultado.setText(testeCachorro.latir());
+            errorLabel.setText("");
+        } catch (NumberFormatException e) {
+            errorLabel.setText("Erro: Por favor insira um número inteiro válido para a idade!");
+        }
     }
+
     @FXML
     private void VoltarMenu(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("FormMenu.fxml"));
@@ -56,7 +75,6 @@ public class CachorroControle {
         stage.setScene(new Scene(root));
         stage.show();
     }
-
-
 }
+
 

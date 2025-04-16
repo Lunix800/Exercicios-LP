@@ -1,5 +1,6 @@
 package com.example.projetolp3;
 
+import com.example.projetolp3.Model.Moto;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -7,6 +8,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -22,6 +24,9 @@ public class MotoControle {
     private Button btnFrearMoto;
 
     @FXML
+    private Label errorLabel;
+
+    @FXML
     private TextField txtCilindradaMoto;
 
     @FXML
@@ -34,24 +39,35 @@ public class MotoControle {
     private TextArea txtResultado;
 
     @FXML
-    void acelerar(ActionEvent event) { Moto testeMoto = new Moto (
-            txtMarcaMoto.getText(),
-            txtModeloMarca.getText(),
-            Integer.valueOf(txtCilindradaMoto.getText())
-    );
-        txtResultado.setText(testeMoto.acelerar());
-
+    void acelerar(ActionEvent event) {
+        try {
+            Moto testeMoto = new Moto(
+                    txtMarcaMoto.getText(),
+                    txtModeloMarca.getText(),
+                    Integer.valueOf(txtCilindradaMoto.getText())
+            );
+            txtResultado.setText(testeMoto.acelerar());
+            errorLabel.setText("");
+        } catch (NumberFormatException e) {
+            errorLabel.setText("Erro: Por favor insira um número válido para a cilindrada!");
+        }
     }
 
     @FXML
-    void frear(ActionEvent event) { Moto testeMoto = new Moto (
-            txtMarcaMoto.getText(),
-            txtModeloMarca.getText(),
-            Integer.valueOf(txtCilindradaMoto.getText())
-    );
-        txtResultado.setText(testeMoto.frear());
-
+    void frear(ActionEvent event) {
+        try {
+            Moto testeMoto = new Moto(
+                    txtMarcaMoto.getText(),
+                    txtModeloMarca.getText(),
+                    Integer.valueOf(txtCilindradaMoto.getText())
+            );
+            txtResultado.setText(testeMoto.frear());
+            errorLabel.setText("");
+        } catch (NumberFormatException e) {
+            errorLabel.setText("Erro: Por favor insira um número válido para a cilindrada!");
+        }
     }
+
     @FXML
     private void VoltarMenu(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("FormMenu.fxml"));
@@ -59,5 +75,4 @@ public class MotoControle {
         stage.setScene(new Scene(root));
         stage.show();
     }
-
 }

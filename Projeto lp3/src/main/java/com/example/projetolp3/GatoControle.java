@@ -1,5 +1,6 @@
 package com.example.projetolp3;
 
+import com.example.projetolp3.Model.Gato;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -7,6 +8,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -22,6 +24,9 @@ public class GatoControle {
     private Button btnMiarGato;
 
     @FXML
+    private Label errorLabel;
+
+    @FXML
     private TextField txtCorGato;
 
     @FXML
@@ -34,24 +39,20 @@ public class GatoControle {
     private TextArea txtResultado;
 
     @FXML
-    void arranhar(ActionEvent event) { Gato testeGato = new Gato (
-            txtRacaGato.getText(),
-            txtCorGato.getText(),
-            Integer.valueOf(txtPesoGato.getText())
-    );
-        txtResultado.setText(testeGato.arranhar());
-
+    void miar(ActionEvent event) {
+        try {
+            Gato testeGato = new Gato(
+                    txtRacaGato.getText(),
+                    txtCorGato.getText(),
+                    Integer.valueOf(txtPesoGato.getText())
+            );
+            txtResultado.setText(testeGato.miar());
+            errorLabel.setText("");
+        } catch (NumberFormatException e) {
+            errorLabel.setText("Erro: Por favor insira um número inteiro válido para o peso!");
+        }
     }
 
-    @FXML
-    void miar(ActionEvent event) { Gato testeGato = new Gato (
-            txtRacaGato.getText(),
-            txtCorGato.getText(),
-            Integer.valueOf(txtPesoGato.getText())
-    );
-        txtResultado.setText(testeGato.miar());
-
-    }
     @FXML
     private void VoltarMenu(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("FormMenu.fxml"));
@@ -59,5 +60,4 @@ public class GatoControle {
         stage.setScene(new Scene(root));
         stage.show();
     }
-
 }

@@ -4,19 +4,33 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetolp3.LancheControle">
    <children>
-      <Label layoutX="99.0" layoutY="85.0" text="Nome" />
-      <Label layoutX="292.0" layoutY="85.0" text="Preço" />
-      <Label layoutX="470.0" layoutY="85.0" text="Tamanho" />
-      <TextField fx:id="txtPrecoLanche" layoutX="240.0" layoutY="117.0" prefHeight="26.0" prefWidth="134.0" />
-      <TextField fx:id="txtNomeLanche" layoutX="48.0" layoutY="117.0" prefHeight="26.0" prefWidth="134.0" />
-      <TextField fx:id="txtTamanhoLanche" layoutX="428.0" layoutY="117.0" prefHeight="26.0" prefWidth="134.0" />
-      <Button fx:id="btnProntoLanche" layoutX="90.0" layoutY="256.0" mnemonicParsing="false" onAction="#servir" prefHeight="26.0" prefWidth="66.0" text="Pronto" />
-      <Button fx:id="btnPrecoLanche" layoutX="90.0" layoutY="302.0" mnemonicParsing="false" onAction="#preco" prefHeight="26.0" prefWidth="66.0" text="Preço" />
-      <TextArea fx:id="txtResultado" layoutX="386.0" layoutY="186.0" prefHeight="200.0" prefWidth="200.0" />
+      <Label layoutX="116.0" layoutY="83.0" text="Nome" />
+      <Label layoutX="284.0" layoutY="80.0" text="Preço" />
+      <Label layoutX="438.0" layoutY="80.0" text="Tamanho" />
+      <TextField fx:id="txtNomeLanche" layoutX="65.0" layoutY="112.0" prefHeight="26.0" prefWidth="134.0" promptText="Ex. X-Salada" />
+      <TextField fx:id="txtPrecoLanche" layoutX="232.0" layoutY="112.0" prefHeight="26.0" prefWidth="134.0" promptText="Ex. 15" />
+      <TextField fx:id="txtTamanhoLanche" layoutX="396.0" layoutY="112.0" prefHeight="26.0" prefWidth="134.0" promptText="Ex. Grande" />
+      <Button fx:id="btnProntoLanche" layoutX="66.0" layoutY="146.0" mnemonicParsing="false" onAction="#servir" prefHeight="26.0" prefWidth="290.0" text="Pronto" />
+      <Button fx:id="btnPrecoLanche" layoutX="65.0" layoutY="182.0" mnemonicParsing="false" onAction="#preco" prefHeight="26.0" prefWidth="290.0" text="Preço" />
+      <TextArea fx:id="txtResultado" disable="true" layoutX="66.0" layoutY="217.0" prefHeight="133.0" prefWidth="290.0" />
       <Button fx:id="btnMenu" layoutX="15.0" layoutY="359.0" mnemonicParsing="false" onAction="#VoltarMenu" prefHeight="26.0" prefWidth="66.0" text="Menu" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="374.0" layoutY="220.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/lanches.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="238.0" layoutY="14.0" text="Lanche">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Label>
+      <Label fx:id="errorLabel" layoutX="90.0" layoutY="363.0" />
    </children>
 </AnchorPane>

@@ -1,4 +1,4 @@
-package com.example.projetolp3;
+package com.example.projetolp3.Model;
 
 public class Vaca {
     // Atributos
@@ -6,19 +6,18 @@ public class Vaca {
     private String cor;
     private double peso;
 
-    // Construtor
     public Vaca(String raca, String cor, double peso) {
         this.raca = raca;
         this.cor = cor;
         this.peso = peso;
     }
 
-    // Método para mugir
+    //Metodo mugir
     public String mugir() {
         return("A vaca da cor " + cor + " está mugindo");
     }
 
-    // Método para comer
+    //Metodo comer
     public String comer() {
         return("A vaca que tem " + peso + "KG está comendo");
     }

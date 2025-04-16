@@ -5,23 +5,22 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetolp3.MenuControle">
+<AnchorPane maxHeight="400.0" maxWidth="600.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetolp3.MenuControle">
    <children>
       <Label layoutX="188.0" layoutY="14.0" text="Selecione uma tela">
          <font>
             <Font size="27.0" />
          </font>
       </Label>
-      <Button fx:id="cachorro" layoutX="162.0" layoutY="103.0" mnemonicParsing="false" onAction="#abrirTelaCachorro" text="Cachorro" />
-      <Button fx:id="carro" layoutX="162.0" layoutY="154.0" mnemonicParsing="false" onAction="#abrirTelaCarro" prefHeight="26.0" prefWidth="65.0" text="Carro" />
-      <Button fx:id="celular" layoutX="162.0" layoutY="211.0" mnemonicParsing="false" onAction="#abrirTelaCelular" prefHeight="26.0" prefWidth="66.0" text="Celular" />
-      <Button fx:id="galinha" layoutX="162.0" layoutY="263.0" mnemonicParsing="false" onAction="#abrirTelaGalinha" prefHeight="26.0" prefWidth="66.0" text="Galinha" />
-      <Button fx:id="gato" layoutX="162.0" layoutY="320.0" mnemonicParsing="false" onAction="#abrirTelaGato" prefHeight="26.0" prefWidth="66.0" text="Gato" />
-      <Button fx:id="lanche" layoutX="379.0" layoutY="103.0" mnemonicParsing="false" onAction="#abrirTelaLanche" prefHeight="26.0" prefWidth="66.0" text="Lanche" />
-      <Button fx:id="livro" layoutX="379.0" layoutY="154.0" mnemonicParsing="false" onAction="#abrirTelaLivro" prefHeight="26.0" prefWidth="66.0" text="Livro" />
-      <Button fx:id="moto" layoutX="379.0" layoutY="211.0" mnemonicParsing="false" onAction="#abrirTelaMoto" prefHeight="26.0" prefWidth="66.0" text="Moto" />
-      <Button fx:id="pato" layoutX="380.0" layoutY="263.0" mnemonicParsing="false" onAction="#abrirTelaPato" prefHeight="26.0" prefWidth="65.0" text="Pato" />
-      <Button fx:id="vaca" layoutX="379.0" layoutY="320.0" mnemonicParsing="false" onAction="#abrirTelaVaca" prefHeight="26.0" prefWidth="66.0" text="Vaca" />
+      <Button fx:id="cachorro" layoutX="156.0" layoutY="103.0" mnemonicParsing="false" onAction="#abrirTelaCachorro" text="Cachorro" />
+      <Button fx:id="carro" layoutX="156.0" layoutY="148.0" mnemonicParsing="false" onAction="#abrirTelaCarro" prefHeight="26.0" prefWidth="65.0" text="Carro" />
+      <Button fx:id="celular" layoutX="155.0" layoutY="194.0" mnemonicParsing="false" onAction="#abrirTelaCelular" prefHeight="26.0" prefWidth="66.0" text="Celular" />
+      <Button fx:id="galinha" layoutX="154.0" layoutY="239.0" mnemonicParsing="false" onAction="#abrirTelaGalinha" prefHeight="26.0" prefWidth="66.0" text="Galinha" />
+      <Button fx:id="gato" layoutX="155.0" layoutY="285.0" mnemonicParsing="false" onAction="#abrirTelaGato" prefHeight="26.0" prefWidth="66.0" text="Gato" />
+      <Button fx:id="lanche" layoutX="379.0" layoutY="102.0" mnemonicParsing="false" onAction="#abrirTelaLanche" prefHeight="26.0" prefWidth="66.0" text="Lanche" />
+      <Button fx:id="livro" layoutX="379.0" layoutY="148.0" mnemonicParsing="false" onAction="#abrirTelaLivro" prefHeight="26.0" prefWidth="66.0" text="Livro" />
+      <Button fx:id="moto" layoutX="379.0" layoutY="194.0" mnemonicParsing="false" onAction="#abrirTelaMoto" prefHeight="26.0" prefWidth="66.0" text="Moto" />
+      <Button fx:id="pato" layoutX="378.0" layoutY="239.0" mnemonicParsing="false" onAction="#abrirTelaPato" prefHeight="26.0" prefWidth="65.0" text="Pato" />
+      <Button fx:id="vaca" layoutX="379.0" layoutY="285.0" mnemonicParsing="false" onAction="#abrirTelaVaca" prefHeight="26.0" prefWidth="66.0" text="Vaca" />
    </children>
 </AnchorPane>

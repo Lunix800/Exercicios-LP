@@ -4,19 +4,34 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetolp3.CarroControle">
    <children>
-      <Label fx:id="lblMarca" layoutX="113.0" layoutY="72.0" text="Marca" />
-      <Label fx:id="lblModelo" layoutX="279.0" layoutY="72.0" text="Modelo" />
-      <Label fx:id="lblAno" layoutX="461.0" layoutY="72.0" text="Ano" />
-      <TextField fx:id="txtMarca" layoutX="66.0" layoutY="121.0" prefHeight="26.0" prefWidth="126.0" />
-      <TextField fx:id="txtModelo" layoutX="236.0" layoutY="121.0" prefHeight="26.0" prefWidth="126.0" />
-      <TextField fx:id="txtAno" layoutX="408.0" layoutY="121.0" prefHeight="26.0" prefWidth="126.0" />
-      <Button fx:id="btnMarca" layoutX="103.0" layoutY="264.0" mnemonicParsing="false" onAction="#marca" text="Marca" />
-      <Button fx:id="btnAno" layoutX="103.0" layoutY="312.0" mnemonicParsing="false" onAction="#ano" prefHeight="26.0" prefWidth="49.0" text="Ano" />
-      <TextArea fx:id="txtResultado" layoutX="386.0" layoutY="190.0" prefHeight="200.0" prefWidth="200.0" />
+      <Label fx:id="lblMarca" layoutX="108.0" layoutY="82.0" text="Marca" />
+      <Label fx:id="lblModelo" layoutX="280.0" layoutY="80.0" text="Modelo" />
+      <Label fx:id="lblAno" layoutX="462.0" layoutY="80.0" text="Ano" />
+      <TextField fx:id="txtMarca" layoutX="61.0" layoutY="113.0" prefHeight="26.0" prefWidth="126.0" promptText="Ex. Fiat" />
+      <TextField fx:id="txtModelo" layoutX="238.0" layoutY="111.0" prefHeight="26.0" prefWidth="126.0" promptText="Ex. Mobi" />
+      <TextField fx:id="txtAno" layoutX="410.0" layoutY="111.0" prefHeight="26.0" prefWidth="126.0" promptText="Ex. 2018" />
+      <Button fx:id="btnAno" layoutX="61.0" layoutY="160.0" mnemonicParsing="false" onAction="#ano" prefHeight="26.0" prefWidth="288.0" text="Ano" />
+      <Button fx:id="btnMarca" layoutX="61.0" layoutY="200.0" mnemonicParsing="false" onAction="#marca" prefHeight="26.0" prefWidth="288.0" text="Marca" />
+      <TextArea fx:id="txtResultado" disable="true" layoutX="61.0" layoutY="236.0" prefHeight="113.0" prefWidth="288.0" />
       <Button fx:id="txtMenu" layoutX="14.0" layoutY="360.0" mnemonicParsing="false" onAction="#VoltarMenu" text="Menu" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="374.0" layoutY="236.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/253e69e6-7463-4219-8e6a-a63d680628db-lg.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblModelo1" layoutX="252.0" layoutY="14.0" text="Carro">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Label>
+      <Label fx:id="errorLabel" layoutX="68.0" layoutY="364.0" />
+      <Label fx:id="errorLabel" layoutX="68.0" layoutY="364.0" />
    </children>
 </AnchorPane>

@@ -1,25 +1,45 @@
 package com.example.projetolp3.Model;
 
 public class Lanche {
-    // Atributos
+    private Integer id; // Para o DAO
     private String nome;
     private double preco;
-    private String tamanho;
+    private String tamanho; // Adicionado como atributo consistente com FXML
 
-    public Lanche(String nome, String ingredientes, double preco) {
+    // Construtor corrigido e principal para criar novos lanches
+    public Lanche(String nome, double preco, String tamanho) {
         this.nome = nome;
         this.preco = preco;
+        this.tamanho = tamanho;
     }
 
-    //Metodo preco
-    public String preco() {
-        return("O lanche " + nome + " custa R$" + preco);
+    // Getters e Setters
+    public Integer getId() { return id; }
+    public void setId(Integer id) { this.id = id; }
+    public String getNome() { return nome; }
+    public void setNome(String nome) { this.nome = nome; }
+    public double getPreco() { return preco; }
+    public void setPreco(double preco) { this.preco = preco; }
+    public String getTamanho() { return tamanho; }
+    public void setTamanho(String tamanho) { this.tamanho = tamanho; }
+
+
+    // Método preco
+    public String precoLanche() { // Renomeado para evitar conflito com o atributo "preco" se fosse um getter
+        return "O lanche " + nome + " (" + tamanho + ") custa R$" + String.format("%.2f", preco).replace(",", ".");
     }
 
-    //Metodo servir
+    // Método servir
     public String servir() {
-        return("O lanche " + nome + " está pronto para ser servido.");
+        return "O lanche " + nome + " (" + tamanho + ") está pronto para ser servido.";
+    }
+
+    public String exibirdados() {
+        return "Nome: " + nome + ", Preço: R$" + String.format("%.2f", preco).replace(",", ".") + ", Tamanho: " + tamanho;
+    }
+
+    @Override
+    public String toString() {
+        return nome + " - " + tamanho;
     }
 }
-
-
